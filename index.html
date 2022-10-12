@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              darkblue: "#090b1a",
+              desaturatedblue: "#1b1938",
+              accent: "#aa5cdb",
+            },
+            fontFamily: {
+              Inter: ["Inter", "sans-serif"],
+              "Lexend-Deca": ["Lexend-Deca", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Frontend Mentor | Stats preview card component</title>
+  </head>
+  <body class="font-Inter bg-black">
+    <div
+      class="main-container bg-desaturatedblue m-auto my-14 w-[80%] rounded-md text-center outline sm:grid sm:min-h-full sm:w-full sm:max-w-[900px] sm:grid-cols-2 sm:text-left"
+    >
+      <div class="relative sm:order-last">
+        <img
+          class="block w-full rounded-md sm:hidden"
+          src="./images/image-header-mobile.jpg"
+          alt="team working together on a project"
+        />
+        <img
+          class="hidden sm:order-1 sm:block sm:h-full sm:w-full sm:rounded-r-md"
+          src="./images/image-header-desktop.jpg"
+          alt="team working together on a project"
+        />
+        <div
+          class="absolute top-0 right-0 z-20 h-full w-full bg-purple-900 opacity-70"
+        ></div>
+      </div>
+      <div
+        class="top-container mx-[12%] text-purple-100 sm:flex sm:flex-col sm:items-center sm:justify-center"
+      >
+        <h1 class="mt-[10%] text-2xl font-bold sm:text-3xl">
+          Get <span class="text-accent">insights </span> that help your business
+          grow.
+        </h1>
+        <p
+          class="font-Lexend-Deca my-[5%] text-sm font-normal leading-6 opacity-60"
+        >
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+        <div
+          class="flex flex-col gap-8 sm:my-[10%] sm:flex sm:w-full sm:flex-row sm:justify-between"
+        >
+          <div class="mt-8 flex flex-col sm:mt-0">
+            <span class="text-xl font-bold"> 10k+ </span
+            ><span class="text-xs uppercase tracking-widest opacity-60"
+              >companies</span
+            >
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold">314 </span
+            ><span class="text-xs uppercase tracking-widest opacity-60"
+              >templates</span
+            >
+          </div>
+          <div class="mb-8 flex flex-col sm:mb-0">
+            <span class="text-xl font-bold uppercase">12m+ </span
+            ><span class="text-xs uppercase tracking-widest opacity-60"
+              >queries</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
